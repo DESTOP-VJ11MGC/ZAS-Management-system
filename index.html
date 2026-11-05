@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ZAS Gym Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>ZAS FITNESS CLUB</h1>
+        <p>GYM MANAGEMENT SYSTEM</p>
+    </header>
+
+    <nav>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#members">Members</a>
+        <a href="#trainers">Trainers</a>
+        <a href="#plans">Plans</a>
+        <a href="#fees">Fees</a>
+    </nav>
+
+    <main>
+
+        <!-- Dashboard -->
+
+        <section id="dashboard">
+
+            <h2>Gym Dashboard</h2>
+
+            <div class="dashboard-cards">
+
+                <div class="card">
+                    <h3>Total Members</h3>
+                    <p id="totalMembers">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Total Trainers</h3>
+                    <p>4</p>
+                </div>
+
+                <div class="card">
+                    <h3>Membership Plans</h3>
+                    <p>3</p>
+                </div>
+
+                <div class="card">
+                    <h3>Fee Records</h3>
+                    <p id="totalFees">0</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Member Registration -->
+
+        <section id="members">
+
+            <h2>Member Registration</h2>
+
+            <form id="memberForm">
+
+                <input type="text"
+                       id="memberName"
+                       placeholder="Enter Full Name"
+                       required>
+
+                <input type="number"
+                       id="memberAge"
+                       placeholder="Enter Age"
+                       min="1"
+                       required>
+
+                <select id="memberGender" required>
+
+                    <option value="">Select Gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+
+                </select>
+
+                <input type="tel"
+                       id="memberPhone"
+                       placeholder="Enter Phone Number"
+                       required>
+
+                <select id="memberPlan" required>
+
+                    <option value="">Select Membership Plan</option>
+                    <option>Basic</option>
+                    <option>Standard</option>
+                    <option>Premium</option>
+
+                </select>
+
+                <button type="submit">
+                    Register Member
+                </button>
+
+            </form>
+
+
+            <h2>Gym Members Records</h2>
+
+            <input type="text"
+                   id="searchMember"
+                   placeholder="Search Members...">
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Gender</th>
+                            <th>Phone</th>
+                            <th>Plan</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="memberList"></tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- Trainers -->
+
+        <section id="trainers">
+
+            <h2>Our Professional Trainers</h2>
+
+            <div class="trainer-container">
+
+                <div class="trainer">
+                    <h3>Ahmed Ali</h3>
+                    <p>Fitness Trainer</p>
+                </div>
+
+                <div class="trainer">
+                    <h3>Usman Shah</h3>
+                    <p>Bodybuilding Coach</p>
+                </div>
+
+                <div class="trainer">
+                    <h3>Bilal Ahmed</h3>
+                    <p>Weight Training Coach</p>
+                </div>
+
+                <div class="trainer">
+                    <h3>Hassan Khan</h3>
+                    <p>Personal Trainer</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Membership Plans -->
+
+        <section id="plans">
+
+            <h2>Membership Plans</h2>
+
+            <div class="plan-container">
+
+                <div class="plan">
+                    <h3>Basic Plan</h3>
+                    <h2>Rs. 2,000</h2>
+                    <p>Monthly Membership</p>
+                    <p>Gym Access</p>
+                </div>
+
+                <div class="plan">
+                    <h3>Standard Plan</h3>
+                    <h2>Rs. 3,500</h2>
+                    <p>Monthly Membership</p>
+                    <p>Gym + Cardio</p>
+                </div>
+
+                <div class="plan">
+                    <h3>Premium Plan</h3>
+                    <h2>Rs. 5,000</h2>
+                    <p>Monthly Membership</p>
+                    <p>Personal Training</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Fee Management -->
+
+        <section id="fees">
+
+            <h2>Monthly Fee Management</h2>
+
+            <form id="feeForm">
+
+                <input type="text"
+                       id="feeMember"
+                       placeholder="Member Name"
+                       required>
+
+                <input type="number"
+                       id="feeAmount"
+                       placeholder="Fee Amount"
+                       min="1"
+                       required>
+
+                <input type="date"
+                       id="feeDate"
+                       required>
+
+                <button type="submit">
+                    Submit Fee
+                </button>
+
+            </form>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Member</th>
+                            <th>Amount</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="feeList"></tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <h3>ZAS FITNESS CLUB</h3>
+
+        <p>Build Strength | Build Confidence | Build Yourself</p>
+
+        <p>Developed By: Zubair Ali Soomro</p>
+
+        <p>© 2026 ZAS Gym Management System</p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

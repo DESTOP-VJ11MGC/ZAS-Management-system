@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #111;
+    color: white;
+}
+
+/* Header */
+
+header {
+    background: #1b1b1b;
+    text-align: center;
+    padding: 35px;
+    border-bottom: 3px solid #ff4500;
+}
+
+header h1 {
+    color: #ff4500;
+    font-size: 35px;
+    letter-spacing: 3px;
+}
+
+header p {
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+
+/* Navigation */
+
+nav {
+    background: #252525;
+    text-align: center;
+    padding: 17px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ff4500;
+}
+
+/* Main */
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+section {
+    background: #1d1d1d;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    scroll-margin-top: 80px;
+}
+
+h2 {
+    color: #ff4500;
+    margin-bottom: 22px;
+}
+
+/* Dashboard */
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: #292929;
+    border-bottom: 4px solid #ff4500;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.card h3 {
+    font-size: 16px;
+}
+
+.card p {
+    font-size: 32px;
+    color: #ff4500;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Forms */
+
+form {
+    display: grid;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+input, select {
+    padding: 14px;
+    background: #303030;
+    border: 1px solid #555;
+    color: white;
+    border-radius: 6px;
+    font-size: 15px;
+    width: 100%;
+}
+
+input:focus, select:focus {
+    outline: 2px solid #ff4500;
+}
+
+input::placeholder {
+    color: #bbb;
+}
+
+/* Buttons */
+
+button {
+    background: #ff4500;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #d93800;
+}
+
+/* Tables */
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    min-width: 650px;
+}
+
+th, td {
+    padding: 14px;
+    text-align: center;
+    border-bottom: 1px solid #444;
+}
+
+th {
+    background: #ff4500;
+    color: white;
+}
+
+tr:hover {
+    background: #303030;
+}
+
+/* Delete Button */
+
+.delete-btn {
+    background: #dc3545;
+    padding: 8px 12px;
+}
+
+/* Trainers */
+
+.trainer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.trainer {
+    background: #292929;
+    border-left: 4px solid #ff4500;
+    padding: 25px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.trainer h3 {
+    color: #ff4500;
+    margin-bottom: 10px;
+}
+
+/* Plans */
+
+.plan-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.plan {
+    background: #292929;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    border-top: 4px solid #ff4500;
+}
+
+.plan h3 {
+    color: #ff4500;
+    margin-bottom: 15px;
+}
+
+.plan h2 {
+    font-size: 25px;
+}
+
+.plan p {
+    margin: 12px;
+}
+
+/* Footer */
+
+footer {
+    background: #252525;
+    border-top: 3px solid #ff4500;
+    text-align: center;
+    padding: 25px;
+    line-height: 2;
+}
+
+footer h3 {
+    color: #ff4500;
+}
+
+/* Responsive */
+
+@media (max-width: 850px) {
+
+    .dashboard-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .trainer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .plan-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 550px) {
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px;
+    }
+
+    .dashboard-cards,
+    .trainer-container {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        width: 95%;
+    }
+
+    section {
+        padding: 15px;
+    }
+}
